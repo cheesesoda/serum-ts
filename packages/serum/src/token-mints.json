@@ -246,5 +246,9 @@
   {
     "address": "z9WZXekbCtwoxyfAwEJn1euXybvqLzPVv3NDzJzkq7C",
     "name": "CRC"
+  },
+  {
+    "address": "8oJ4nGEJmGCq8RikM3R8wdAN8d8ZxrhMYpbUPYzCMgFq",
+    "name": "RPC"
   }
 ]

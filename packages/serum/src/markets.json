@@ -112,5 +112,11 @@
     "deprecated": false,
     "name": "FROG/SODA",
     "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
+  },
+  {
+    "address": "BnbZn344JTBaSdXUBh111935hA7UjnJe973AirirSzJz",
+    "deprecated": false,
+    "name": "RPC/USDC",
+    "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
   }
 ]

@@ -100,5 +100,11 @@
     "deprecated": false,
     "name": "CARE/USDC",
     "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
+  },
+  {
+    "address": "82eWNBLw5z7idGEaMbks7J6MrE73YosXZcrNXH4syAUA",
+    "deprecated": false,
+    "name": "AUSS/SODA",
+    "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
   }
 ]

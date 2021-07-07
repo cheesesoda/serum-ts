@@ -106,5 +106,11 @@
     "deprecated": false,
     "name": "AUSS/SODA",
     "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
+  },
+  {
+    "address": "h3QQ83Nnk9KrfNcFqUhTo8K7BqEgRTTe54jVjULoEYg",
+    "deprecated": false,
+    "name": "FROG/SODA",
+    "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
   }
 ]

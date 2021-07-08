@@ -250,5 +250,9 @@
   {
     "address": "8oJ4nGEJmGCq8RikM3R8wdAN8d8ZxrhMYpbUPYzCMgFq",
     "name": "RPC"
+  },
+  {
+    "address": "BLwTnYKqf7u4qjgZrrsKeNs2EzWkMLqVCu6j8iHyrNA3",
+    "name": "BOP"
   }
 ]

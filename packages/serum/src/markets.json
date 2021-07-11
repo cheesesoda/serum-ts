@@ -124,5 +124,11 @@
     "deprecated": false,
     "name": "BOP/USDC",
     "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
+  },
+  {
+    "address": "77quYg4MGneUdjgXCunt9GgM1usmrxKY31twEy3WHwcS",
+    "deprecated": false,
+    "name": "USDT/USDC",
+    "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
   }
 ]

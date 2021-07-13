@@ -91,6 +91,16 @@ INSTRUCTION_LAYOUT.inner.addVariant(
   struct([u64('clientId')]),
   'cancelOrderByClientIdV2',
 );
+INSTRUCTION_LAYOUT.inner.addVariant(
+  14,
+  struct([]),
+  'closeOpenOrders',
+);
+INSTRUCTION_LAYOUT.inner.addVariant(
+  15,
+  struct([]),
+  'initOpenOrders',
+);
 
 export function encodeInstruction(instruction) {
   const b = Buffer.alloc(100);
@@ -280,6 +290,8 @@ export class DexInstructions {
   static consumeEvents({
     market,
     eventQueue,
+    coinFee,
+    pcFee,
     openOrdersAccounts,
     limit,
     programId,
@@ -293,6 +305,8 @@ export class DexInstructions {
         })),
         { pubkey: market, isSigner: false, isWritable: true },
         { pubkey: eventQueue, isSigner: false, isWritable: true },
+        { pubkey: coinFee, isSigner: false, isWriteable: true },
+        { pubkey: pcFee, isSigner: false, isWritable: true},
       ],
       programId,
       data: encodeInstruction({ consumeEvents: { limit } }),
@@ -434,6 +448,49 @@ export class DexInstructions {
       programId,
       data: encodeInstruction({
         settleFunds: {},
+      }),
+    });
+  }
+
+  static closeOpenOrders({
+    market,
+    openOrders,
+    owner,
+    solWallet,
+    programId,
+  }) {
+    const keys = [
+      { pubkey: openOrders, isSigner: false, isWritable: true },
+      { pubkey: owner, isSigner: true, isWritable: false },
+      { pubkey: solWallet, isSigner: false, isWritable: true },
+      { pubkey: market, isSigner: false, isWritable: false },
+    ];
+    return new TransactionInstruction({
+      keys,
+      programId,
+      data: encodeInstruction({
+        closeOpenOrders: {},
+      }),
+    });
+  }
+
+  static initOpenOrders({
+    market,
+    openOrders,
+    owner,
+    programId,
+  }) {
+    const keys = [
+      { pubkey: openOrders, isSigner: false, isWritable: true },
+      { pubkey: owner, isSigner: true, isWritable: false },
+      { pubkey: market, isSigner: false, isWritable: false },
+      { pubkey: SYSVAR_RENT_PUBKEY, isSigner: false, isWritable: false },
+    ];
+    return new TransactionInstruction({
+      keys,
+      programId,
+      data: encodeInstruction({
+        initOpenOrders: {},
       }),
     });
   }

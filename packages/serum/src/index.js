@@ -1,4 +1,10 @@
-export { Market, Orderbook, OpenOrders } from './market';
+export {
+  Market,
+  Orderbook,
+  OpenOrders,
+  MARKET_STATE_LAYOUT_V3,
+  MARKET_STATE_LAYOUT_V2,
+} from './market';
 export {
   DexInstructions,
   decodeInstruction,
@@ -19,3 +25,10 @@ export {
 } from './queue';
 export * as TokenInstructions from './token-instructions';
 export * from './error';
+export { MarketProxy, MarketProxyBuilder } from './market-proxy';
+export {
+  OpenOrdersPda,
+  ReferralFees,
+  Logger,
+  Middleware,
+} from './market-proxy/middleware';
